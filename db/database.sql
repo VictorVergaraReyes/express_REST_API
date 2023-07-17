@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS carddb;
+
+USE carddb;
+
+CREATE TABLE card(
+    id INT (10) NOT NULL,
+    name VARCHAR (30) DEFAULT NULL,
+    type VARCHAR (10) DEFAULT NULL,
+    PRIMARY KEY (id)
+);
