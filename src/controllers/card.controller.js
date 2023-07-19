@@ -7,7 +7,7 @@ export const getCards = async (req,res) => {
         res.json(rows)
     } catch (error) {
         return res.status(500).json({
-            message:"Something goes wrong :o "
+            message:"Something goes wrong :o, not CARDS found"
         })
     }
 }
