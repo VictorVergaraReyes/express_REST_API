@@ -17,14 +17,10 @@ export const getCard = async (req,res) => {
     try {
         const [rows] = await pool.query('SELECT * FROM card WHERE id = ?', [req.params.id])
     console.log(rows)
-    res.json(rows[0])
-
-    if (rows.length <=0 ) return res.status(404).json({
-        message: "Card not found"
-    })
+    res.json(rows)
     } catch (error) {
         return res.status(500).json({
-            message:"Something goes wrong :o "
+            message:"Something goes wrong, card doesn't exists"
         })
     }
 }
@@ -38,7 +34,9 @@ export const createCard = async (req,res) => {
         res.send({
             id: rows.insertId,
             name,
-            salary,
+            type,
+            attack,
+            defense,
         })
     } catch (error) {
         return res.status(500).json({
