@@ -1,6 +1,6 @@
-import app from "./app.js"
+import handler from "./app.js"
 import { PORT } from "./config.js"
 
-app.listen(PORT)
-console.log("server on port ".PORT)
+handler.listen(PORT)
+console.log("server on port ",PORT)
  
