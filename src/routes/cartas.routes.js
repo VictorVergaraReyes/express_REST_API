@@ -2,7 +2,6 @@ import { Router } from "express";
 import { getCards, getCard, createCard, updateCard, deleteCard } from "../controllers/card.controller.js";
 
 const router=Router()
-router.get('/server',(req, res)=> res.send('Hello world Its time to  D-D-D-D-Duel !!! '))
 router.get('/card',getCards)
 router.get('/card/:id',getCard)
 router.post('/card',createCard)
